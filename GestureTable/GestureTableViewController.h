@@ -1,5 +1,5 @@
 //
-//  SceneDelegate.h
+//  GestureTableViewController.h
 //  GestureTable
 //
 //  Created by JSH on 2020/9/12.
@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
+NS_ASSUME_NONNULL_BEGIN
 
-@property (strong, nonatomic) UIWindow * window;
+@interface GestureTableViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

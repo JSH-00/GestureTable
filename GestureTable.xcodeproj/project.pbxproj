@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5738A925250C9B10007ADEE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5738A924250C9B10007ADEE4 /* AppDelegate.m */; };
-		5738A928250C9B10007ADEE4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5738A927250C9B10007ADEE4 /* SceneDelegate.m */; };
 		5738A92B250C9B10007ADEE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5738A92A250C9B10007ADEE4 /* ViewController.m */; };
 		5738A92E250C9B10007ADEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5738A92C250C9B10007ADEE4 /* Main.storyboard */; };
 		5738A930250C9B14007ADEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5738A92F250C9B14007ADEE4 /* Assets.xcassets */; };
@@ -16,6 +15,13 @@
 		5738A936250C9B14007ADEE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5738A935250C9B14007ADEE4 /* main.m */; };
 		5738A940250C9B14007ADEE4 /* GestureTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5738A93F250C9B14007ADEE4 /* GestureTableTests.m */; };
 		5738A94B250C9B14007ADEE4 /* GestureTableUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5738A94A250C9B14007ADEE4 /* GestureTableUITests.m */; };
+		5738A95A250D20E3007ADEE4 /* GestureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5738A959250D20E3007ADEE4 /* GestureTableViewController.m */; };
+		5738A960250D2233007ADEE4 /* GestureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5738A95F250D2233007ADEE4 /* GestureTableViewCell.m */; };
+		5738A96325132EEE007ADEE4 /* SwipeGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5738A96225132EEE007ADEE4 /* SwipeGestureViewController.m */; };
+		57EC37722515D40A00D4B1C9 /* PanGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EC37712515D40A00D4B1C9 /* PanGestureViewController.m */; };
+		57EC37752518633100D4B1C9 /* GestureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EC37742518633100D4B1C9 /* GestureModel.m */; };
+		57EC37782518EC9B00D4B1C9 /* LongGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EC37772518EC9B00D4B1C9 /* LongGestureViewController.m */; };
+		57EC377B2518ED9000D4B1C9 /* RotationGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EC377A2518ED9000D4B1C9 /* RotationGestureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +45,6 @@
 		5738A920250C9B10007ADEE4 /* GestureTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5738A923250C9B10007ADEE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5738A924250C9B10007ADEE4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5738A926250C9B10007ADEE4 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		5738A927250C9B10007ADEE4 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		5738A929250C9B10007ADEE4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5738A92A250C9B10007ADEE4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5738A92D250C9B10007ADEE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +58,20 @@
 		5738A946250C9B14007ADEE4 /* GestureTableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureTableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5738A94A250C9B14007ADEE4 /* GestureTableUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureTableUITests.m; sourceTree = "<group>"; };
 		5738A94C250C9B14007ADEE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5738A958250D20E3007ADEE4 /* GestureTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureTableViewController.h; sourceTree = "<group>"; };
+		5738A959250D20E3007ADEE4 /* GestureTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureTableViewController.m; sourceTree = "<group>"; };
+		5738A95E250D2233007ADEE4 /* GestureTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureTableViewCell.h; sourceTree = "<group>"; };
+		5738A95F250D2233007ADEE4 /* GestureTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureTableViewCell.m; sourceTree = "<group>"; };
+		5738A96125132EEE007ADEE4 /* SwipeGestureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipeGestureViewController.h; sourceTree = "<group>"; };
+		5738A96225132EEE007ADEE4 /* SwipeGestureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipeGestureViewController.m; sourceTree = "<group>"; };
+		57EC37702515D40A00D4B1C9 /* PanGestureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanGestureViewController.h; sourceTree = "<group>"; };
+		57EC37712515D40A00D4B1C9 /* PanGestureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanGestureViewController.m; sourceTree = "<group>"; };
+		57EC37732518633100D4B1C9 /* GestureModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureModel.h; sourceTree = "<group>"; };
+		57EC37742518633100D4B1C9 /* GestureModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureModel.m; sourceTree = "<group>"; };
+		57EC37762518EC9B00D4B1C9 /* LongGestureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LongGestureViewController.h; sourceTree = "<group>"; };
+		57EC37772518EC9B00D4B1C9 /* LongGestureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LongGestureViewController.m; sourceTree = "<group>"; };
+		57EC37792518ED9000D4B1C9 /* RotationGestureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotationGestureViewController.h; sourceTree = "<group>"; };
+		57EC377A2518ED9000D4B1C9 /* RotationGestureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotationGestureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +124,22 @@
 			children = (
 				5738A923250C9B10007ADEE4 /* AppDelegate.h */,
 				5738A924250C9B10007ADEE4 /* AppDelegate.m */,
-				5738A926250C9B10007ADEE4 /* SceneDelegate.h */,
-				5738A927250C9B10007ADEE4 /* SceneDelegate.m */,
+				5738A958250D20E3007ADEE4 /* GestureTableViewController.h */,
+				5738A959250D20E3007ADEE4 /* GestureTableViewController.m */,
 				5738A929250C9B10007ADEE4 /* ViewController.h */,
 				5738A92A250C9B10007ADEE4 /* ViewController.m */,
+				5738A95E250D2233007ADEE4 /* GestureTableViewCell.h */,
+				5738A95F250D2233007ADEE4 /* GestureTableViewCell.m */,
+				57EC37702515D40A00D4B1C9 /* PanGestureViewController.h */,
+				57EC37712515D40A00D4B1C9 /* PanGestureViewController.m */,
+				57EC37762518EC9B00D4B1C9 /* LongGestureViewController.h */,
+				57EC37772518EC9B00D4B1C9 /* LongGestureViewController.m */,
+				5738A96125132EEE007ADEE4 /* SwipeGestureViewController.h */,
+				5738A96225132EEE007ADEE4 /* SwipeGestureViewController.m */,
+				57EC37792518ED9000D4B1C9 /* RotationGestureViewController.h */,
+				57EC377A2518ED9000D4B1C9 /* RotationGestureViewController.m */,
+				57EC37732518633100D4B1C9 /* GestureModel.h */,
+				57EC37742518633100D4B1C9 /* GestureModel.m */,
 				5738A92C250C9B10007ADEE4 /* Main.storyboard */,
 				5738A92F250C9B14007ADEE4 /* Assets.xcassets */,
 				5738A931250C9B14007ADEE4 /* LaunchScreen.storyboard */,
@@ -267,10 +297,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EC377B2518ED9000D4B1C9 /* RotationGestureViewController.m in Sources */,
+				57EC37782518EC9B00D4B1C9 /* LongGestureViewController.m in Sources */,
 				5738A92B250C9B10007ADEE4 /* ViewController.m in Sources */,
+				57EC37752518633100D4B1C9 /* GestureModel.m in Sources */,
+				5738A95A250D20E3007ADEE4 /* GestureTableViewController.m in Sources */,
+				57EC37722515D40A00D4B1C9 /* PanGestureViewController.m in Sources */,
 				5738A925250C9B10007ADEE4 /* AppDelegate.m in Sources */,
+				5738A960250D2233007ADEE4 /* GestureTableViewCell.m in Sources */,
 				5738A936250C9B14007ADEE4 /* main.m in Sources */,
-				5738A928250C9B10007ADEE4 /* SceneDelegate.m in Sources */,
+				5738A96325132EEE007ADEE4 /* SwipeGestureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -427,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
