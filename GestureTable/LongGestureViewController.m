@@ -9,7 +9,7 @@
 #import "LongGestureViewController.h"
 
 @interface LongGestureViewController ()
-
+@property (nonatomic,weak)UILabel * changeLabel;
 @end
 
 @implementation LongGestureViewController
@@ -18,16 +18,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor yellowColor];
+    UIImageView * new_image_view = [[UIImageView alloc ]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    self.productImageView = new_image_view;
+    new_image_view.backgroundColor = [UIColor redColor];
+    [self.view addSubview:new_image_view];
+
+    self.productImageView.userInteractionEnabled = YES;
+    UILongPressGestureRecognizer *longGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(LongView:)];
+    longGesture.minimumPressDuration = 0.2;
+    [self.productImageView addGestureRecognizer:longGesture];
+
+    UILabel * change_lable = [[UILabel alloc]initWithFrame:CGRectMake(100, 200, 300, 200)];
+    self.changeLabel = change_lable;
+    change_lable.numberOfLines = 2;
+    [change_lable setText:@"请长按红色方块"];
+    [self.view addSubview:change_lable];
 }
 
-/*
-#pragma mark - Navigation
+- (void)LongView:(UILongPressGestureRecognizer *)longPress
+{
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if (longPress.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"longPressBegan");
+        [self.changeLabel setText:@"longPressBegan"];
+
+    }else if (longPress.state == UIGestureRecognizerStateChanged){
+        NSLog(@"longPressChange");
+        [self.changeLabel setText:@"longPressChange"];
+
+    }else if (longPress.state == UIGestureRecognizerStateEnded){
+        NSLog(@"end");
+        [self.changeLabel setText:@"end\n请长按红色方块"];
+    }
 }
-*/
-
 @end

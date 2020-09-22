@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LongGestureViewController : UIViewController
-
+@property (nonatomic, weak)UIImageView * productImageView;
 @end
 
 NS_ASSUME_NONNULL_END
