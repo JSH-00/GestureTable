@@ -8,8 +8,8 @@
 
 #import "RotationGestureViewController.h"
 
-@interface RotationGestureViewController ()
-
+@interface RotationGestureViewController ()<UIGestureRecognizerDelegate>
+@property (nonatomic ,weak) UIImageView * productImageView;
 @end
 
 @implementation RotationGestureViewController
@@ -18,16 +18,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor greenColor];
+    
+    UIImageView * new_image_view = [[UIImageView alloc ]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    self.productImageView = new_image_view;
+    new_image_view.backgroundColor = [UIColor redColor];
+    [self.view addSubview:new_image_view];
+    self.productImageView.userInteractionEnabled = YES;
+    
+    UIRotationGestureRecognizer * rotation_gesture = [[UIRotationGestureRecognizer alloc]initWithTarget:self action:@selector(rotationView:)];
+    rotation_gesture.delegate = self;
+    [self.view addGestureRecognizer:rotation_gesture];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)rotationView:(UIRotationGestureRecognizer *)gestrue
+{
+    NSLog(@"%f",gestrue.rotation);
+    self.productImageView.transform = CGAffineTransformRotate(self.productImageView.transform, gestrue.rotation);
+    // 复位
+    gestrue.rotation = 0;
 }
-*/
-
 @end
