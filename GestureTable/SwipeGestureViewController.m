@@ -19,20 +19,20 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blueColor];
     
-    UILabel * new_label = [[UILabel alloc ]initWithFrame:CGRectMake(100, 100, 180, 200)];
-    self.productLable = new_label;
-    new_label.backgroundColor = [UIColor redColor];
-    new_label.numberOfLines = 0;
-    [self.view addSubview:new_label];
+    UILabel * newLabel = [[UILabel alloc ]initWithFrame:CGRectMake(100, 100, 180, 200)];
+    self.productLable = newLabel;
+    newLabel.backgroundColor = [UIColor redColor];
+    newLabel.numberOfLines = 0;
+    [self.view addSubview:newLabel];
     [self.productLable setText:@"左扫"];
     self.productLable.userInteractionEnabled = YES;
     
-    UISwipeGestureRecognizer * swipe_gesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeView:)];
-    swipe_gesture.direction = UISwipeGestureRecognizerDirectionLeft; // 默认为右扫
-    [self.productLable addGestureRecognizer:swipe_gesture];
+    UISwipeGestureRecognizer * swipeGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeView:)];
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionLeft; // 默认为右扫
+    [self.productLable addGestureRecognizer:swipeGesture];
     
-    UISwipeGestureRecognizer * swipe_gesture_blue = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeView:)];
-    [self.view addGestureRecognizer:swipe_gesture_blue]; // 默认为右扫
+    UISwipeGestureRecognizer * swipeGestureBlue = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeView:)];
+    [self.view addGestureRecognizer:swipeGestureBlue]; // 默认为右扫
 }
 
 - (void)swipeView:(UISwipeGestureRecognizer *)gesture

@@ -34,14 +34,14 @@
 #pragma mark - Table view data source
 - (void)reloadGestureModel
 {
-    NSMutableArray * gesture_array = [NSMutableArray new];
-    self.gestureArray = gesture_array;
-    NSArray * gesture_name = @[@"PanGesture",@"LongPressGesture",@"SwipeGesture",@"RotationGesture"];
-    NSArray * gesture_vc = @[@"PanGestureViewController",@"LongGestureViewController",@"SwipeGestureViewController",@"RotationGestureViewController"];
-    for (int i = 0; i < gesture_name.count || i < gesture_vc.count; i++) {
+    NSMutableArray * gestureArray = [NSMutableArray new];
+    self.gestureArray = gestureArray;
+    NSArray * gestureName = @[@"PanGesture",@"LongPressGesture",@"SwipeGesture",@"RotationGesture"];
+    NSArray * gestureVC = @[@"PanGestureViewController",@"LongGestureViewController",@"SwipeGestureViewController",@"RotationGestureViewController"];
+    for (int i = 0; i < gestureName.count || i < gestureVC.count; i++) {
         GestureModel * gesture = [GestureModel new];
-        gesture.gestureName = [gesture_name objectAtIndex:i];
-        gesture.gestureVC = [gesture_vc objectAtIndex:i];
+        gesture.gestureName = [gestureName objectAtIndex:i];
+        gesture.gestureVC = [gestureVC objectAtIndex:i];
         [self.gestureArray addObject:gesture];
     }
 }
@@ -75,9 +75,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *vcClassString = [self.gestureArray objectAtIndex:indexPath.row].gestureVC;
-    Class gesture_class = NSClassFromString(vcClassString);
-    UIViewController *gesture_vc = [[gesture_class alloc] init];
-    [self.navigationController pushViewController:gesture_vc animated:YES];
+    Class gestureClass = NSClassFromString(vcClassString);
+    UIViewController *gestureVC = [[gestureClass alloc] init];
+    [self.navigationController pushViewController:gestureVC animated:YES];
 }
 
 // Override to support conditional editing of the table view.

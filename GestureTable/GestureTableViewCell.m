@@ -20,9 +20,9 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        UILabel *cell_name = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 200, 100)];
-        self.cellName = cell_name;
-        [self.contentView addSubview:cell_name];
+        UILabel *cellName = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 200, 100)];
+        self.cellName = cellName;
+        [self.contentView addSubview:cellName];
     }
     return self;
 }

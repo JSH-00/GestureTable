@@ -18,10 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
-    UIImageView * new_image_view = [[UIImageView alloc ]initWithFrame:CGRectMake(100, 100, 100, 100)];
-    self.productImageView = new_image_view;
-    new_image_view.backgroundColor = [UIColor yellowColor];
-    [self.view addSubview:new_image_view];
+    UIImageView * newImageView = [[UIImageView alloc ]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    self.productImageView = newImageView;
+    newImageView.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:newImageView];
     
     
     //    平移

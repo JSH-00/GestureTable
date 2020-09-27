@@ -21,10 +21,9 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    ViewController *vc1 = [ViewController new];
-    GestureTableViewController *vc2 = [GestureTableViewController new];
-    UINavigationController *vc1_NA = [[UINavigationController alloc] initWithRootViewController:vc2];
-    self.window.rootViewController = vc1_NA;
+    GestureTableViewController *vc1 = [GestureTableViewController new];
+    UINavigationController *vc1NA = [[UINavigationController alloc] initWithRootViewController:vc1];
+    self.window.rootViewController = vc1NA;
     [self.window makeKeyAndVisible];
     return YES;
 }

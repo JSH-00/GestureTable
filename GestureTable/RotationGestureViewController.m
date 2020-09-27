@@ -19,15 +19,15 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor greenColor];
     
-    UIImageView * new_image_view = [[UIImageView alloc ]initWithFrame:CGRectMake(100, 100, 100, 100)];
-    self.productImageView = new_image_view;
-    new_image_view.backgroundColor = [UIColor redColor];
-    [self.view addSubview:new_image_view];
+    UIImageView * newImageView = [[UIImageView alloc ]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    self.productImageView = newImageView;
+    newImageView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:newImageView];
     self.productImageView.userInteractionEnabled = YES;
     
-    UIRotationGestureRecognizer * rotation_gesture = [[UIRotationGestureRecognizer alloc]initWithTarget:self action:@selector(rotationView:)];
-    rotation_gesture.delegate = self;
-    [self.view addGestureRecognizer:rotation_gesture];
+    UIRotationGestureRecognizer * rotationGesture = [[UIRotationGestureRecognizer alloc]initWithTarget:self action:@selector(rotationView:)];
+    rotationGesture.delegate = self;
+    [self.view addGestureRecognizer:rotationGesture];
 }
 
 - (void)rotationView:(UIRotationGestureRecognizer *)gestrue
