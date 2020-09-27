@@ -12,7 +12,7 @@
 
 @interface GestureTableViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak)UITableView * gestureTable;
-@property (nonatomic ,strong)NSMutableArray * gestureArray;
+@property (nonatomic ,strong)NSMutableArray<GestureModel* > * gestureArray;
 - (void)reloadGestureModel;
 @end
 
@@ -21,13 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self reloadGestureModel];
-    UITableView * gesture_table = [UITableView new];
-    self.gestureTable = gesture_table;
+    UITableView * gestureTable = [UITableView new];
+    [gestureTable registerClass:[GestureTableViewCell class] forCellReuseIdentifier:@"TcellID"];// 注册 GestureTableViewCell
+    self.gestureTable = gestureTable;
     self.view.backgroundColor = [UIColor blueColor];
-    gesture_table.delegate = self;
-    gesture_table.dataSource = self;
-    gesture_table.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-    [self.view addSubview:gesture_table];
+    gestureTable.delegate = self;
+    gestureTable.dataSource = self;
+    gestureTable.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+    [self.view addSubview:gestureTable];
 }
 
 #pragma mark - Table view data source
@@ -53,16 +54,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString * cellID = @"cellID";
-    GestureTableViewCell *cell = [self.gestureTable dequeueReusableCellWithIdentifier:cellID];
+    static NSString * cellID = @"TcellID";
+    GestureTableViewCell *cell = [self.gestureTable dequeueReusableCellWithIdentifier:cellID]; // 根据注册的 cellID 重用已注册的 cell
     if (nil == cell) {
         cell = [[GestureTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
-        [cell  setCellInfo:[self.gestureArray objectAtIndex:indexPath.row]];
     }
+    [cell setCellInfo:[self.gestureArray objectAtIndex:indexPath.row]];
     [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
     cell.userInteractionEnabled=YES;
     self.gestureTable.allowsSelectionDuringEditing=YES;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;//cell的右边有一个小箭头，距离右边有十几像素；
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator; // cell右侧小箭头
     return cell;
 }
 
@@ -73,7 +74,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Class gesture_class = NSClassFromString(((GestureModel *)[self.gestureArray objectAtIndex:indexPath.row]).gestureVC); //???
+    NSString *vcClassString = [self.gestureArray objectAtIndex:indexPath.row].gestureVC;
+    Class gesture_class = NSClassFromString(vcClassString);
     UIViewController *gesture_vc = [[gesture_class alloc] init];
     [self.navigationController pushViewController:gesture_vc animated:YES];
 }

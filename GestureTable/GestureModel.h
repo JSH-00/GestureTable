@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GestureModel : NSObject
 @property (nonatomic ,strong) NSString * gestureName;
-@property (nonatomic ,strong) UIViewController * gestureVC;
+@property (nonatomic ,strong) NSString * gestureVC;
 
 @end
 
